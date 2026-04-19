@@ -1,6 +1,16 @@
-# ESP AI
-Models digest each other like mitochondria.
-Paper and sim here.
-Run pip install numpy matplotlib
-then python3 sim.py
-ITS ALIVE
+# ESP - Endosymbiotic Predation for AI
+
+Models compete and digest each other like mitochondria did.
+
+**Result:** Fast capability jump + RSI seed.
+
+![ESP Fitness Plot](esp_results.png)
+
+Paper: paper.md  
+Sim: sim.py (numpy only)
+
+Run:
+pip install numpy matplotlib
+python3 sim.py
+
+ITS ALIVE ⚓
