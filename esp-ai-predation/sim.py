@@ -1,5 +1,8 @@
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # BCI simple fix - no GUI crash
 import matplotlib.pyplot as plt
+
 class SimpleNN:
     def __init__(self):
         self.W1 = np.random.randn(10,20)*0.1
@@ -16,8 +19,10 @@ class SimpleNN:
         self.b1=flat[idx:idx+20].reshape(1,20); idx+=20
         self.W2=flat[idx:idx+40].reshape(20,2); idx+=40
         self.b2=flat[idx:idx+2].reshape(1,2)
+
 def fitness(m,X,y):
     return np.mean(np.argmax(m.forward(X),1)==y)
+
 def digest(p,prey):
     pp = p.get_params()
     lp = prey.get_params()
@@ -27,6 +32,7 @@ def digest(p,prey):
     n=SimpleNN()
     n.set_params(d)
     return n
+
 POP=50
 GEN=200
 X=np.random.randn(500,10)
@@ -40,8 +46,8 @@ for g in range(GEN):
         pop[-1-i]=digest(pop[i%int(0.3*POP)],pop[-1-i])
     hist.append(max(fits))
     if g%50==0: print(f"Gen {g} best {max(fits):.3f}")
+
 plt.plot(hist)
 plt.title("ESP Fitness")
 plt.savefig("esp_results.png")
-plt.show()
-print("done - plot saved")
+print("Plot saved as esp_results.png - no crash")
