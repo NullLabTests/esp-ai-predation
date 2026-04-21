@@ -1,6 +1,6 @@
 **Endosymbiotic Predation for AI**
 
-TheGoldenAnchor
+
 
 Abstract
 Earth 4.5B year history on 24 hour clock shows one cell engulfed another to make mitochondria powerhouse. We give AI the same: models compete and digest each other. Winner keeps most of its code and adds good parts from loser plus a new powerhouse part. This seeds RSI fast.
